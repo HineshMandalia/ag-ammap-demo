@@ -27,9 +27,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "node_modules/ammap3/ammap/plugins/export/export.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/ammap3/ammap/ammap.js",
+              "node_modules/ammap3/ammap/maps/js/worldLow.js",
+              "node_modules/ammap3/ammap/plugins/export/export.min.js",
+              "node_modules/ammap3/ammap/themes/light.js"
+            ]
           },
           "configurations": {
             "production": {
