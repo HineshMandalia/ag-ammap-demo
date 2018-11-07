@@ -16,9 +16,12 @@ export class AgAmmap3Component implements OnInit {
   toronto: Location = new Location('Toronto', 43.8163, -79.4287);
   paris: Location = new Location('Paris', 48.8567, 2.3510);
   london: Location = new Location('London', 51.5074, -0.1278);
+  hongkong: Location = new Location('HongKong', 22.3964, 114.1095);
 
   london_iceland: Path = new Path(this.london, this.iceland);
   india_london: Path = new Path(this.india, this.london);
+  hongkong_london: Path = new Path(this.hongkong, this.london);
+
   constructor() {
     // tslint:disable-next-line:max-line-length
     this.map = AmCharts.makeChart( 'chartdiv', {
@@ -33,7 +36,9 @@ export class AgAmmap3Component implements OnInit {
           this.india_london.line,
           this.india_london.line.shadow,
           this.london_iceland.line,
-          this.london_iceland.line.shadow
+          this.london_iceland.line.shadow,
+          this.hongkong_london.line,
+          this.hongkong_london.line.shadow,
         ]
          ,
         'images': [
@@ -41,10 +46,13 @@ export class AgAmmap3Component implements OnInit {
           this.iceland,
           this.india,
           this.london,
+          this.hongkong,
           this.india_london.animation,
           this.india_london.shadowAnimation,
           this.london_iceland.animation,
-          this.london_iceland.shadowAnimation
+          this.london_iceland.shadowAnimation,
+          this.hongkong_london.animation,
+          this.hongkong_london.shadowAnimation
       ]
       },
 
